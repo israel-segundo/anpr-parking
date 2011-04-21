@@ -1,0 +1,111 @@
+/*
+      Created by Keith Donegan of Code-Sucks.com
+	  
+	  E-Mail: Keithdonegan@gmail.com
+	  
+	  You can do whatever you want with these layouts,
+	  but it would be greatly appreciated if you gave a link
+	  back to http://www.code-sucks.com
+	  
+*/
+
+* { padding: 0; margin: 0; }
+
+body {
+ font-family: Arial, Helvetica, sans-serif;
+ font-size: 10px;
+ background-color: white;
+ background-image: url(../images/bg.gif);
+ background-repeat: repeat-x;
+ height: 100%;
+}
+#wrapper {
+ margin: 0 auto;
+ width: 922px;
+}
+#faux {
+ overflow: auto; /* Paul O Brien Fix for IE www.pmob.co.uk */
+ background: white;
+ padding: 20px 10px 20px 10px;
+}
+#header {
+ color: #333;
+ width: 902px;
+ padding: 10px;
+ height: 70px;
+ margin: 0px 0px 0px 0px;
+ background: white;
+}
+#navigation {
+ padding: 5px;
+ margin: 0px 0px 0px 0px;
+ background: #ABBEBE;
+ overflow: hidden;
+ background: white;
+}
+
+#content {
+ margin: 0px;
+ padding: 0px;
+ width: 100%;
+}
+#footer { 
+ width: 902px;
+ clear: both;
+ background: white;
+ color: #A3A3A3;
+ font-weight: normal;
+ padding: 10px;
+ padding-top: 20px;
+ text-align: center;
+}
+.clear { clear: both; background: none; }
+
+#menu{
+    list-style: none;
+}
+
+#menu li{
+    margin:2px;
+    float: left;
+}
+
+#menu li a {
+    display:block;
+    width:150px;
+    padding:4px 0;
+    text-decoration:none;
+    text-align:center;
+    font-size:11px;
+    color:#FFFFFF;
+    background-color:#90ABC8;
+}
+
+#menu li a:hover {
+    color:#FFFFFF;
+    font-weight: bold;
+    background-color:#003366;
+}
+
+h1{
+    color: #90ABC8;
+    font-size: 18px;
+}
+
+.error{
+    color: red;
+    padding-left: 5px;
+}
+
+.form{
+    padding: 10px 0px 10px 10px;
+}
+
+.automatic-form-field{
+    width: 50%;
+    float: left;
+}
+.form-results{
+    width: 50%;
+    float: left;
+}
