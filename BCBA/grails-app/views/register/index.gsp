@@ -5,8 +5,6 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="layout" content="main" />
     <title>Registro de Autos</title>
-    <g:javascript src="jquery-validate/jquery.validate.js" />
-    <g:javascript src="jquery-validate/localization/messages_es.js" />
     <g:javascript>
 
       $(document).ready(function(){

@@ -109,3 +109,33 @@ h1{
     width: 50%;
     float: left;
 }
+
+img{
+    border-style: none;
+}
+
+.add_button{
+    margin-top: 15px;
+}
+
+.navigation-bar{
+    margin-bottom: 18px;
+}
+
+#contenido{
+    margin-top: 18px;
+}
+
+.submit {
+    border: 1px solid #006  ;
+    background: #e5e3e3;
+    padding: 2px;
+}
+
+.info{
+    background: #EAF6FA;
+    font-weight: bold;
+    border: 1px black solid;
+    padding: 3px;
+    margin-bottom: 10px;
+}

@@ -2,9 +2,11 @@ package bcba
 
 class Car {
 
+    static belongsTo = [ carModel: CarModel, person: Person ]
+
     int year
-    String color
     boolean discount
+    String color
     String plateNumber
 
     Date dateCreated
