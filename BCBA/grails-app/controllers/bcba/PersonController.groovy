@@ -30,7 +30,7 @@ class PersonController {
 
     /*Accion que se ejecuta al eliminar un fabricante*/
     def delete = {
-        println params
+        
         def person = Person.get(params.id)
 
         try{

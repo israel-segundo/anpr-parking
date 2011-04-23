@@ -48,7 +48,7 @@
 
     <div id="contenido">
 
-      <g:form id="addForm" name="addForm" action="add_store">
+      <g:form name="addForm" action="add_store">
 
         <table>
 

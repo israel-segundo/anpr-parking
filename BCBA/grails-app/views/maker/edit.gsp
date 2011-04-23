@@ -30,7 +30,7 @@
 
     <div id="contenido">
 
-      <g:form id="editForm" name="editForm" action="edit_store">
+      <g:form name="editForm" action="edit_store">
 
         <g:hiddenField name="id" value="${maker.id}" />
         <table>

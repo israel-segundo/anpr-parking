@@ -92,6 +92,11 @@ h1{
     font-size: 18px;
 }
 
+h2{
+    color: #90ABC8;
+    font-size: 16px;
+}
+
 .error{
     color: red;
     padding-left: 5px;
@@ -145,4 +150,20 @@ img{
     border: 1px black solid;
     padding: 3px;
     margin-bottom: 10px;
+}
+
+.catalogue{
+
+}
+
+.catalogue a{
+    background: blue;
+}
+
+.catalogue a img{
+    float: left;
+}
+
+.catalogue a span{
+    float: left;
 }

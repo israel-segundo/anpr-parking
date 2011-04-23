@@ -65,7 +65,7 @@
     <div id="contenido">
 
       <div class="add_button">
-        <g:link controller="person" action="add">
+        <g:link controller="person" action="add" >
            <img src="${resource(dir:'images/icons',file:'118379_35949_32_add_database_icon.png')}" title="Agregar" alt="Agregar" />Agregar nueva persona
         </g:link>
       </div>

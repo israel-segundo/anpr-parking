@@ -51,7 +51,7 @@
              <ul id="menu">
                <li><g:link controller="search" action="automaticSearch">Búsqueda Automática</g:link></li>
                <li><g:link controller="search" action="manualSearch">Búsqueda Manual</g:link></li>
-               <li><g:link controller="register" action="index">Registro de Autos</g:link></li>
+               <li><g:link controller="governmentCar" action="add">Registro de Autos Externos</g:link></li>
                <li><g:link controller="search" action="advancedSearch">Búsqueda Avanzada</g:link></li>
                <li><g:link controller="catalogue" action="index">Catálogo</g:link></li>
              </ul>

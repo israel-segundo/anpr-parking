@@ -20,7 +20,7 @@
           'Debes seleccionar una opción'
         );
 
-        $('#addForm').validate({
+        $('#editForm').validate({
           rules : {
             maker : {
               selected: true
@@ -71,7 +71,7 @@
     <h1>Editar Auto Ecológico o Green Car</h1>
     <div id="contenido">
 
-      <g:form id="addForm" name="addForm" action="add_store">
+      <g:form name="editForm" action="edit_store">
         <g:hiddenField name="id" value="${greenCar.id}" />
         <table>
 

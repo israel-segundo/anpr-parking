@@ -6,7 +6,6 @@ class Car {
 
     int year
     boolean discount
-    String color
     String plateNumber
 
     Date dateCreated
