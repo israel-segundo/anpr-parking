@@ -53,7 +53,7 @@
         Este elemento será eliminado de forma permanente y no podrá ser recuperado. ¿Estás seguro?
       </p>
     </div>
-    
+
     <div class="navigation-bar">
       <g:link controller="catalogue" action="index">Catálogos </g:link>- Green Cars
     </div>

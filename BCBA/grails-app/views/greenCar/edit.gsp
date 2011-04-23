@@ -72,7 +72,7 @@
     <div id="contenido">
 
       <g:form id="addForm" name="addForm" action="add_store">
-
+        <g:hiddenField name="id" value="${greenCar.id}" />
         <table>
 
           <tr>

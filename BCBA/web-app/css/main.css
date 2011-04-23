@@ -139,3 +139,10 @@ img{
     padding: 3px;
     margin-bottom: 10px;
 }
+.error{
+    background: #fea9a9;
+    font-weight: bold;
+    border: 1px black solid;
+    padding: 3px;
+    margin-bottom: 10px;
+}

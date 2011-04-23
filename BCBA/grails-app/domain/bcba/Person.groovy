@@ -2,7 +2,7 @@ package bcba
 
 class Person {
 
-    static hasMany = [ cars: Car]
+    static hasMany = [ cars: Car ]
     String name
     String lastName
     String email

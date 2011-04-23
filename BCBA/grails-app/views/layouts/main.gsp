@@ -66,6 +66,13 @@
                     <div class="info">${msg}</div>
                 </g:each>
             </g:if>
+
+             <g:if test="${flash.error}">
+                <g:each in="${flash.error}" var="msg">
+                    <div class="error">${msg}</div>
+                </g:each>
+            </g:if>
+
              <!-- Begin Right Column -->
              <div id="content">
                 <g:layoutBody />
