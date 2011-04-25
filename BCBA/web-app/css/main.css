@@ -167,3 +167,14 @@ img{
 .catalogue a span{
     float: left;
 }
+#gReport
+{
+	height:350px;
+	width:500px;
+	margin: 0 auto;
+	background: #ddd
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -webkit-box-shadow: 0 1px 3px #666;	
+	margin-top: 20px;
+}
