@@ -36,6 +36,11 @@
         <span>Modelos de autos</span>
       </g:link>
 
+      <g:link controller="report" action="index">
+        <img src="${resource(dir:'images/icons',file:'115360_32671_128_geometric_graphics_icon.png')}" title="Reportes" alt="Reportes" />
+        <span>Reportes</span>
+      </g:link>
+
     </div>
 
   </body>
