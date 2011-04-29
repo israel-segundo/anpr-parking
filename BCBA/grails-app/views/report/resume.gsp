@@ -92,6 +92,7 @@
                 </tr>
             </tbody>
         </table>
+    ${cars}
     <div id="holder">
     </div>
   </body>
