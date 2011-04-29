@@ -12,7 +12,7 @@ class CarController {
     def add_store = {
 
         def person = Person.get( params.personId )
-
+        
         if( !person ){
             flashHelper.error "Hubo un error al almacenar el registro. Intente nuevamente"
             redirect( controller: 'person', action: 'index')
