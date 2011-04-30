@@ -2,6 +2,10 @@ package bcba
 
 class GovernmentCarController {
 
+    def index = {
+        [ 'governmentCars': GovernmentCar.list() ]
+    }
+
     def add = {
         [ 'makers': Maker.list() ]
     }
@@ -24,5 +28,17 @@ class GovernmentCarController {
             flashHelper.error "Hubo un error al almacenar el registro. ${governmentCar.errors}"
         }
         redirect(action:'add')
+    }
+
+    def edit = {
+
+    }
+
+    def edit_store = {
+
+    }
+
+    def delete = {
+
     }
 }

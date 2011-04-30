@@ -64,11 +64,16 @@
 
     <div id="contenido">
 
-      <div class="add_button">
-        <g:link controller="person" action="add" >
-           <img src="${resource(dir:'images/icons',file:'118379_35949_32_add_database_icon.png')}" title="Agregar" alt="Agregar" />Agregar nueva persona
-        </g:link>
+      <div class="operation-menu">
+        <div class="operation-button">
+          <g:link controller="person" action="add" >
+             <img src="${resource(dir:'images/icons',file:'118379_35949_32_add_database_icon.png')}" title="Agregar" alt="Agregar" />
+             <span>Agregar nueva persona</span>
+          </g:link>
+        </div>
       </div>
+
+      <div class="clear"></div>
 
       <div>
 
