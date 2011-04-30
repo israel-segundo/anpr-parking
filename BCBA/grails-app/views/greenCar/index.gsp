@@ -62,11 +62,23 @@
 
     <div id="contenido">
 
-      <div class="add_button">
-        <g:link controller="greenCar" action="add">
-           <img src="${resource(dir:'images/icons',file:'118379_35949_32_add_database_icon.png')}" title="Agregar" alt="Agregar" />Agregar nuevo auto ecológico
-        </g:link>
+      <div class="operation-menu">
+
+          <div class="operation-button">
+            <g:link controller="greenCar" action="add">
+               <img src="${resource(dir:'images/icons',file:'118379_35949_32_add_database_icon.png')}" title="Agregar" alt="Agregar" />
+               <span>Agregar nuevo auto ecológico</span>
+            </g:link>
+          </div>
+          <div class="operation-button">
+            <g:link controller="greenCar" action="upload_file">
+               <img src="${resource(dir:'images/icons',file:'118679_36249_32_excel_page_icon.png')}" title="Cargar archivo" alt="Cargar Archivo" />
+               <span>Cargar formato</span>
+            </g:link>
+          </div>
       </div>
+
+      <div class="clear"></div>
 
       <div>
 

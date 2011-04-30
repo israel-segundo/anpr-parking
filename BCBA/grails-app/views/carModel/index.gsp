@@ -57,11 +57,16 @@
     <h1>Catálogo de Modelos de Autos</h1>
 
     <div id="content">
-      <div class="add_button">
-        <g:link controller="carModel" action="add">
-           <img src="${resource(dir:'images/icons',file:'118379_35949_32_add_database_icon.png')}" title="Agregar" alt="Agregar" />Agregar nuevo modelo
-        </g:link>
+
+      <div class="operation-menu">
+        <div class="operation-button">
+          <g:link controller="carModel" action="add">
+             <img src="${resource(dir:'images/icons',file:'118379_35949_32_add_database_icon.png')}" title="Agregar" alt="Agregar" />
+             <span>Agregar nuevo modelo</span>
+          </g:link>
+        </div>
       </div>
+      <div class="clear"></div>
 
       <div>
         <table id="myTable" class="tablesorter">
