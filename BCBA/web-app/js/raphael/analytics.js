@@ -13,14 +13,43 @@ Raphael.fn.drawGrid = function (x, y, w, h, wv, hv, color) {
 };
 
 $(function () {
-    $("#data").css({
+    $(".data").css({
         position: "absolute",
         left: "-9999em",
         top: "-9999em"
     });
 });
 
-window.onload = function () {
+window.onload = function (){
+var data = [], data2 = [], data3 = [];
+
+$("#entradas td").each(function () {
+     data.push($(this).html());
+});
+
+$("#salidas td").each(function () {
+     data2.push($(this).html());
+});
+
+
+$.each(data,function(index,value){
+    console.log(data[index]);
+    console.log(data2[index]);
+    data3.push(parseInt(data2[index])+parseInt(data[index]));
+    console.log(data3[index]);
+})
+
+graph(data3,"holderActividad");
+graph(data2,"holderSalidas");
+graph(data,"holderEntradas");
+
+
+};
+
+
+
+
+function graph(data,div) {
     function getAnchors(p1x, p1y, p2x, p2y, p3x, p3y) {
         var l1 = (p2x - p1x) / 2,
             l2 = (p3x - p2x) / 2,
@@ -41,14 +70,12 @@ window.onload = function () {
         };
     }
     // Grab the data
-    var labels = [],
-        data = [];
-    $("#data tfoot th").each(function () {
+    var labels = [];
+    
+    $("#labels th").each(function () {
         labels.push($(this).html());
     });
-    $("#data tbody td").each(function () {
-        data.push($(this).html());
-    });
+    
     
     // Draw
     var width = 800,
@@ -56,10 +83,10 @@ window.onload = function () {
         leftgutter = 30,
         bottomgutter = 20,
         topgutter = 20,
-        colorhue = .0 || Math.random(),
+        colorhue = .1, //|| Math.random(),
         color = "hsb(" + [colorhue, 1, 1] + ")",
-        r = Raphael("holder", width, height),
-        txt = {font: '12px Helvetica, Arial', fill: "#fff"},
+        r = Raphael(div, width, height),
+        txt = {font: '12px Helvetica, Arial', fill: "#000"},
         txt1 = {font: '10px Helvetica, Arial', fill: "#fff"},
         txt2 = {font: '12px Helvetica, Arial', fill: "#000"},
         X = (width - leftgutter) / labels.length,
@@ -75,6 +102,18 @@ window.onload = function () {
     label.push(r.text(60, 12, "24 hits").attr(txt));
     label.push(r.text(60, 27, "22 September 2008").attr(txt1).attr({fill: color}));
     label.hide();
+
+    var step =10;
+    var ylabel = [];
+    for (var i=0; i<step+1;i++){
+        ylabel.push(i*(max-max%10)/10);
+    }
+    
+    var y_label_stepheight = Math.round(height - bottomgutter - Y * (step-1));
+    for (var j=0;j < ylabel.length;j++){
+        s = r.text(26,((y_label_stepheight-(step*((j-1)*2)))-j), ylabel[j]).attr(txt).toBack();
+    }
+
     var frame = r.popup(100, 100, label, "right").attr({fill: "#000", stroke: "#666", "stroke-width": 2, "fill-opacity": .7}).hide();
 
     var p, bgpp;
