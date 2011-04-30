@@ -19,7 +19,7 @@
 			<ul>
 				<li><g:link controller="report" action="panel">Reporte General</g:link></li>
 				<li><g:link controller="report" action="frequent">Autos Frecuentes</g:link></li>
-				<li><g:link controller="report" action="log">Entrada y Salida de Autos</g:link></li>
+				<li><g:link controller="report" action="bitacora">Entrada y Salida de Autos</g:link></li>
 				<li><g:link controller="report" action="comparative">Autos Verdes vs Autos no Verdes?</g:link></li>
 				<li><g:link controller="report" action="resume">Autos Parqueados</g:link></li>
 			</ul>

@@ -10,6 +10,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="layout" content="main" />
     <title>Búsqueda Automática</title>
+    <script type="text/javascript">
+
+      $(document).ready( function(){
+
+      });
+      //}{
+      
+    </script>
   </head>
   <body>
     <h1>Búsqueda Automática</h1>

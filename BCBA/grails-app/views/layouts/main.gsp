@@ -49,9 +49,9 @@
            <!-- Begin Navigation -->
            <div id="navigation">
              <ul id="menu">
-               <li><g:link controller="search" action="automaticSearch">Registro Automático</g:link></li>
-               <li><g:link controller="search" action="manualSearch">Registro Manual</g:link></li>
-               <li><g:link controller="search" action="advancedSearch">Registro de Estacionamiento</g:link></li>
+               <li><g:link controller="search" action="automaticSearch">Registro de Llegadas</g:link></li>
+               <li><g:link controller="search" action="automaticSearch">Registro manuel de Llegadas</g:link></li>
+               <li><g:link controller="search" action="advancedSearch">Búsqueda avanzada</g:link></li>
                <li><g:link controller="catalogue" action="index">Catálogos</g:link></li>
                <li><g:link controller="report" action="index">Reportes</g:link></li>
              </ul>

@@ -11,7 +11,7 @@ class ReportController
 	def frequent = {
 		
 	}
-	def log = {
+	def bitacora = {
 		
 	}
 	def comparative = {
