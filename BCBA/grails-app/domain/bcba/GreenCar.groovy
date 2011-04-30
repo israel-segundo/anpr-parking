@@ -10,4 +10,8 @@ class GreenCar {
 
     static constraints = {
     }
+
+    static isGreenCar(  ){
+
+    }
 }

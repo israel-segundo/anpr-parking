@@ -77,9 +77,32 @@ class GreenCarController {
             if( greenCar.save( insert:false ) ){
                 flashHelper.info 'Se ha actualizado el registro exitosamente'
             }else{
-                flashHelper.error "Hubo un error al actualizar el registro. ${person.errors}"
+                flashHelper.error "Hubo un error al actualizar el registro. ${greenCar.errors}"
             }
         }
         redirect(action:'index')
+    }
+
+
+    def upload_file = {
+        
+    }
+
+    def upload_store = {
+
+        def f = request.getFile('file')
+
+        if( !f.empty ){
+
+            // Carga del archivo
+
+            flashHelper.info "Se ha cargado el archivo existosamente."
+            redirect( action: 'index' )
+
+        }else{
+            flashHelper.error "Error al cargar el archivo. Intente nuevamente."
+            redirect( action: 'upload_file' )
+        }
+
     }
 }

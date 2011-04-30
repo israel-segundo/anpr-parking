@@ -86,6 +86,7 @@
             <thead>
               <tr>
                   <th>ID</th>
+                  <th>Placas</th>
                   <th>Fabricante</th>
                   <th>Modelo</th>
                   <th>Año</th>
@@ -101,6 +102,7 @@
 
                 <tr>
                     <td>${governmentCar.id}</td>
+                    <td>${governmentCar.plateNumber}</td>
                     <td>${governmentCar.carModel.maker.description}</td>
                     <td>${governmentCar.carModel.description}</td>
                     <td>${governmentCar.year}</td>
