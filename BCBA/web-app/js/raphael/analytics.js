@@ -20,31 +20,7 @@ $(function () {
     });
 });
 
-window.onload = function (){
-var data = [], data2 = [], data3 = [];
 
-$("#entradas td").each(function () {
-     data.push($(this).html());
-});
-
-$("#salidas td").each(function () {
-     data2.push($(this).html());
-});
-
-
-$.each(data,function(index,value){
-    console.log(data[index]);
-    console.log(data2[index]);
-    data3.push(parseInt(data2[index])+parseInt(data[index]));
-    console.log(data3[index]);
-})
-
-graph(data3,"holderActividad");
-graph(data2,"holderSalidas");
-graph(data,"holderEntradas");
-
-
-};
 
 
 
@@ -78,6 +54,7 @@ function graph(data,div) {
     
     
     // Draw
+    var y0 = 209; //posicion del 0 en el label vertical para que no se mueva aunque se le cambien los valores a la tabla.
     var width = 800,
         height = 250,
         leftgutter = 30,
@@ -102,14 +79,15 @@ function graph(data,div) {
     label.push(r.text(60, 12, "24 hits").attr(txt));
     label.push(r.text(60, 27, "22 September 2008").attr(txt1).attr({fill: color}));
     label.hide();
-
+    
     var step =10;
     var ylabel = [];
     for (var i=0; i<step+1;i++){
         ylabel.push(i*(max-max%10)/10);
     }
     
-    var y_label_stepheight = Math.round(height - bottomgutter - Y * (step-1));
+    var y_label_stepheight = y0;//Math.round(height - bottomgutter - Y * (step-1));
+    
     for (var j=0;j < ylabel.length;j++){
         s = r.text(26,((y_label_stepheight-(step*((j-1)*2)))-j), ylabel[j]).attr(txt).toBack();
     }
