@@ -9,6 +9,7 @@ class SearchController {
     def advancedSearch = { }
 
     def automaticSearch = { }
+<<<<<<< HEAD
 
     def consultPlate = {
 
@@ -27,4 +28,6 @@ class SearchController {
 
 	render params.callback + "('" + converter.toString() + "')"
     }
+=======
+>>>>>>> fb282a8985b8f4498a00ec8acb39c76f5b8c6d42
 }

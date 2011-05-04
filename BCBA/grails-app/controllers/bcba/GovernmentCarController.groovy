@@ -92,7 +92,7 @@ class GovernmentCarController {
         if( !f.empty ){
 
             // Carga del archivo
-
+			GovernmentCar.uploadCreate(f)
             flashHelper.info "Se ha cargado el archivo existosamente."
             redirect( action: 'index' )
 

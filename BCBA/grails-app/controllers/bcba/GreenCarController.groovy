@@ -93,9 +93,8 @@ class GreenCarController {
         def f = request.getFile('file')
 
         if( !f.empty ){
-
-            // Carga del archivo
-
+			
+			GreenCar.uploadCreate(f)
             flashHelper.info "Se ha cargado el archivo existosamente."
             redirect( action: 'index' )
 
