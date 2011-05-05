@@ -36,44 +36,14 @@
     <h1>Autos Parqueados</h1>
     <table id="labels" class="data">
               <tr>
-				<!--Aqui se debe de usar g:each luego de sacar los autos por dias
-					no tenemos info en la base de datos como para simular esto -->
-                  <th>1</th>
-                  <th>2</th>
-                  <th>3</th>
-                  <th>4</th>
-                  <th>5</th>
-                  <th>6</th>
-                  <th>7</th>
-                  <th>8</th>
-                  <th>9</th>
-                  <th>10</th>
-                  <th>11</th>
-                  <th>12</th>
-                  <th>13</th>
-                  <th>14</th>
-                  <th>15</th>
-                  <th>16</th>
-                  <th>17</th>
-                  <th>18</th>
-                  <th>19</th>
-                  <th>19</th>
-                  <th>20</th>
-                  <th>22</th>
-                  <th>23</th>
-                  <th>24</th>
-                  <th>25</th>
-                  <th>26</th>
-                  <th>27</th>
-                  <th>28</th>
-                  <th>29</th>
-                  <th>30</th>
-                  <th>31</th>
+				<g:each in="${(1..days)}">
+					<th>${it}</th>
+				</g:each>
               </tr>
           </table>
           <table id="parkeados" class="data">
               <tr>
-                  <td>8</td>
+              	  <td>8</td>
                   <td>25</td>
                   <td>27</td>
                   <td>25</td>
@@ -104,6 +74,10 @@
                   <td>70</td>
                   <td>68</td>
                   <td>200</td>
+				<!--Descomentar en cuanto se tengan datos reales, la tabla saca un promedio para ver de cuanto en cuanto se avanza.-->
+				<!--<g:each in="${carPerDay}">
+					<td>${it}</td>
+				</g:each>-->>
               </tr>
         </table>
     <div id="holder">
