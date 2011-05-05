@@ -83,7 +83,10 @@ class CarController {
             car.carModel  = CarModel.get(params.carModel)
             car.year      = Integer.parseInt(params.year)
             car.plateNumber = params.plateNumber
-
+			
+			/*To fix the goddamn grails error ¬¬'*/
+			car.discount = GovernmentCar.isGreenCar(car.plateNumber)
+			
             if( car.save( insert:false ) ){
                 flashHelper.info 'Se ha actualizado el registro exitosamente'
             }else{
