@@ -12,7 +12,7 @@ hibernate {
 }
 // environment specific settings
 environments {
-    development {6
+    development {
         dataSource {
             dbCreate = "update" // one of 'create', 'create-drop','update'
             url = "jdbc:mysql://localhost/bcba_parking_lot"
