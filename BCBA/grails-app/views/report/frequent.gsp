@@ -31,7 +31,7 @@
                                 fout = function () {
                                     this.flag.animate({opacity: 0}, 300, function () {this.remove();});
                                 };
-                                r.g.txtattr.font = "12px 'Fontin Sans', Fontin-Sans, sans-serif";
+                                r.g.txtattr.font = "5px 'Fontin Sans', Fontin-Sans, sans-serif";
                                 r.g.barchart(50, 20, 600, 220, [data], {stacked: true, type: "soft"}).hover(fin, fout).label(matriculas);
                               };
                         }
@@ -42,11 +42,11 @@
 	<div class="navigation-bar">
     	<g:link controller="report" action="index">Reportes </g:link> - Autos Frecuentes
   	</div>
-
+	<div>Cambie el font porque no entraban los nombres!!!! esta en 5px y se encuentra en esta misma vista</div>
     <table id="data">
 	<tfoot>
 	  <tr>
-            <th>1</th>
+            <!--<th>1</th>
             <th>2</th>
             <th>3</th>
             <th>4</th>
@@ -57,12 +57,15 @@
             <th>9</th>
             <th>10</th>
             <th>11</th>
-            <th>12</th>
+            <th>12</th>-->
+			<g:each var="frequent" in="${frequents}">
+				<th>${frequent[0]}</th>
+			</g:each>
           </tr>
 	</tfoot>
         <tbody>
           <tr>
-            <td>8</td>
+            <!--<td>8</td>
             <td>25</td>
             <td>27</td>
             <td>25</td>
@@ -73,12 +76,29 @@
             <td>27</td>
             <td>25</td>
             <td>25</td>
-            <td>25</td>
+            <td>25</td>-->
+			<g:each var="frequent" in="${frequents}">
+				<td>${frequent[1]}</td>
+			</g:each>
           </tr>
         </tbody>
       </table>
     <h1>Autos Frecuentes</h1>
     <div id="holder">
     </div>
+	<div>
+		<table border="1">
+			<tr>
+				<th>Placa</th>
+				<th>Veces que se estaciono</th>
+			</tr>
+			<g:each var="frequent" in="${frequents}">
+				<tr>
+					<td>${frequent[0]}</td>
+					<td>${frequent[1]}</td>				
+				</tr>
+			</g:each>
+		</table>
+	</div>
   </body>
 </html>

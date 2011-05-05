@@ -36,6 +36,8 @@
     <h1>Autos Parqueados</h1>
     <table id="labels" class="data">
               <tr>
+				<!--Aqui se debe de usar g:each luego de sacar los autos por dias
+					no tenemos info en la base de datos como para simular esto -->
                   <th>1</th>
                   <th>2</th>
                   <th>3</th>
@@ -101,7 +103,7 @@
                   <td>78</td>
                   <td>70</td>
                   <td>68</td>
-                  <td>2</td>
+                  <td>200</td>
               </tr>
         </table>
     <div id="holder">

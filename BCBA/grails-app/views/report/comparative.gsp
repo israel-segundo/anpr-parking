@@ -21,7 +21,7 @@
 
 		            r.g.text(graphCenter, 60, "Porcentaje de autos verdes/contaminantes").attr({"font-size": 20});
 					
-					var pie = r.g.piechart(graphCenter,200,PieRadius,[10,${example.size()}],
+					var pie = r.g.piechart(graphCenter,200,PieRadius,[${percentage[0]},${percentage[1]}],
 						{
 							legend:["%%.%% No Ecológicos","%%.%% Verdes"],
 							legendpos:"west"

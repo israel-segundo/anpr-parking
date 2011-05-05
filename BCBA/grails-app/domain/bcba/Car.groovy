@@ -17,6 +17,5 @@ class Car {
 	def beforeInsert = {
 		this.plateNumber = this.plateNumber
 		this.discount = GovernmentCar.isGreenCar(this.plateNumber)
-		print 'estoy en el before insert \n'
 	}
 }
