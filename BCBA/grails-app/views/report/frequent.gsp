@@ -42,7 +42,7 @@
 	<div class="navigation-bar">
     	<g:link controller="report" action="index">Reportes </g:link> - Autos Frecuentes
   	</div>
-	<div>Cambie el font porque no entraban los nombres!!!! esta en 5px y se encuentra en esta misma vista</div>
+	<!--<div>Cambie el font porque no entraban los nombres!!!! esta en 5px y se encuentra en esta misma vista</div>-->
     <table id="data">
 	<tfoot>
 	  <tr>
