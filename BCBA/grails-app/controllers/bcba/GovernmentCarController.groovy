@@ -82,7 +82,7 @@ class GovernmentCarController {
     }
 
     def upload_file = {
-        
+        //print GovernmentCar.isGreenCar('XWR4124')
     }
 
     def upload_store = {
