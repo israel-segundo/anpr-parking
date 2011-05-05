@@ -13,8 +13,8 @@
     <script type="text/javascript">
 
       function muestraSpinner(){
-          $('.spinner').css('padding-top', '120px');
-          $('.spinner').css('padding-left', '200px');
+          $('.spinner').css('padding-top', '130px');
+          $('.spinner').css('padding-left', '250px');
           $('.spinner').css('display', 'block');
       }
 
@@ -22,8 +22,10 @@
 
         $('#registrarLlegadaButton').click( function(event){
 
-          muestraSpinner();
+          $('.search-ajax-result').css('display','none');
 
+          muestraSpinner();
+          
           var url = ""+'/BCBA/search/consultPlate?callback=?';
 
           $.getJSON(
@@ -35,7 +37,19 @@
 
               data = $.parseJSON(data);
 
-              $('.search-result').prepend('<img id="theImg" height="50%" width="50%" src="'+data.url+'" />')
+              $('#imagen-foto').attr( 'src', data.url );
+              $('#placa').html( data.plate );
+              $('#ms').html( data.time );
+
+              var discount_img  = '/BCBA/images/icons/109650_26576_16_leaf_minus_icon.png';
+
+              if( data.discount == 'false' ){
+                discount_img  = '/BCBA/images/icons/109655_26581_16_leaf_icon.png';
+              }
+
+              $('#imagen-descuento').attr( 'src', discount_img);
+
+              $('.search-ajax-result').fadeIn('slow');
             }
           );
           
@@ -71,6 +85,58 @@
               <img src="${resource(dir:'images/icons',file:'spinner.gif')}" title="Cargando" alt="Cargando" />
             </div>
 
+            <div class="search-ajax-result">
+
+              <div class="search-ajax-result-titulo">Resultado de la búsqueda</div>
+
+              <div class="search-ajax-result-image">
+                <img id="imagen-foto" src="" height="200px"  width="270px"/>
+              </div>
+
+              <div class="search-ajax-result-datos">
+                  <table>
+                    <tr>
+                      <td>
+                        Placa:
+                      </td>
+                      <td>
+                        <span id="placa"></span>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        Tiempo de procesamiento:
+                      </td>
+                      <td>
+                        <span id="ms"></span>&nbsp;ms
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td>
+                        ¿Aplica descuento?:
+                      </td>
+                      <td>
+                        <img id="imagen-descuento" src="" />
+                      </td>
+                    </tr>
+
+                  </table>
+              </div>
+
+              <div class="acciones">
+
+                <div class="llegada-button">
+                  <a href="#" id="Registrar">
+                     <span>Dar de alta</span>
+                  </a>
+                </div>
+                
+                <br/><br/><br/><br/>
+              </div>
+
+            </div>
           </div>
           <div class="clear"></div>
       </div>

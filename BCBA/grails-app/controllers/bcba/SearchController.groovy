@@ -1,6 +1,8 @@
 package bcba
 
 import grails.converters.*
+//import bcba.anpr.*;
+
 
 class SearchController {
 
@@ -12,15 +14,19 @@ class SearchController {
 
     def consultPlate = {
 
-        def result = ''
 
-        // mandar llamar madres de gonzalo
+//		def recognizer = new PlateRecognizer("http://192.168.1.114")
+//		def result = recognizer.processImage()
 
-        result = [
-            'url'   : 'http://10.48.58.246/fotos/C360_2011-04-21%2015-37-42.jpg',
-            'status': 'ok',
-            'discount' : true,
-            'time'  : 10000
+
+//		result.put('discount', 'true')
+
+        def result = [
+            'plate' : 'LXK1099',
+            'url'   : 'http://localhost/fotos/C360_2011-04-21%2015-39-05.jpg',
+            'status': 'ok', // ok, warning, error
+            'time'  : 1234,
+            'discount' : false
         ]
 
         def converter = result as JSON
