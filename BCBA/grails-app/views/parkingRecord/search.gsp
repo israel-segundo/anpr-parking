@@ -41,6 +41,9 @@
 
                 event.preventDefault();
               });
+
+              $('#del').datepicker({ dateFormat: 'dd/mm/yy'});
+              $('#hasta').datepicker({ dateFormat: 'dd/mm/yy'});
           }
       );
       //}{
@@ -59,22 +62,22 @@
 
       <div>
 
-          <g:form name="searchForm" action="search_ajax">
+          <g:form name="searchForm" method="get" action="search">
             <table>
 
               <tr>
                 <td>Placa</td>
-                <td><g:textField class="required" name="placa" /></td>
+                <td><g:textField class="required" name="placa" value="${params.placa}"/></td>
               </tr>
 
               <tr>
                 <td>Del:</td>
-                <td><g:textField class="required" name="del" /></td>
+                <td><g:textField class="required" name="del" value="${params.del}"/></td>
               </tr>
 
               <tr>
                 <td>Hasta:</td>
-                <td><g:textField class="required" name="hasta" /></td>
+                <td><g:textField class="required" name="hasta" value="${params.hasta}"/></td>
               </tr>
 
               <tr>

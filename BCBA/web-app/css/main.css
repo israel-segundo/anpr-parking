@@ -323,3 +323,24 @@ img{
     width: 40px;
     float:left;
 }
+
+#indexReport{
+    margin-top: 30px;
+    margin-left: 50px;
+    color: black;
+}
+
+#indexReport ul li{
+    list-style-image: url(../images/icons/109655_26581_16_leaf_icon.png);
+    margin-bottom: 10px;
+}
+
+#indexReport ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+#indexReport ul li a:hover{
+    text-decoration: none;
+    color: black;
+}
