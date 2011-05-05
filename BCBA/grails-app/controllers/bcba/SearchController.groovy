@@ -32,6 +32,15 @@ class SearchController {
             'time'  : 1234,
             'discount' : false
         ]
+
+        def pr          = new ParkingRecord(
+            plateNumber  : result['plate'],
+            entranceDate : new Date(),
+            exitDate     : new Date(),
+            discount     : result['discount']
+        )
+        
+        pr.save()
         
         def converter = result as JSON
 

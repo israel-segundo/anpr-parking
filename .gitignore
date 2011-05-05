@@ -1,0 +1,8 @@
+#ignore specific files
+DataSource.groovy
+
+# wildcards
+*.class
+
+#Can also ignore all directories and files in a directory
+BCBA/target/*

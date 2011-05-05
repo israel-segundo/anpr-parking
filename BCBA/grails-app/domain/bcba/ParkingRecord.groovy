@@ -2,7 +2,8 @@ package bcba
 
 class ParkingRecord {
 
-    Car  car
+    String plateNumber
+    boolean discount
     Date entranceDate
     Date exitDate
     
