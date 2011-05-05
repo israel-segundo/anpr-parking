@@ -9,7 +9,7 @@ class ReportController
 		
 	}
 	def frequent = {
-		
+		print 'asshole!'
 	}
 	def bitacora = {
 		
