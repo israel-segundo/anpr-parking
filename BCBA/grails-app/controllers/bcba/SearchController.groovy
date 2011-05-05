@@ -1,14 +1,11 @@
 package bcba
 
 import grails.converters.*
-import bcba.anpr.*;
-
 
 class SearchController {
 
     def index = { }
     def manualSearch = { 
-		print "Que pedo puto!!"
 	}
     def advancedSearch = { 
 		
@@ -17,24 +14,18 @@ class SearchController {
     def automaticSearch = { }
 
     def consultPlate = {
+        def result = ''
 
-        
-		def recognizer = new PlateRecognizer("http://192.168.1.114")
-		def result = recognizer.processImage()
-		
-		
-		result.put('discount', 'true')
-		
-        /*result = [
-            'url'   : processResult.get('url'),
-            'status': processResult.get('status'),
+        // mandar llamar madres de gonzalo
+
+        result = [
+            'url'   : 'http://10.48.58.246/fotos/C360_2011-04-21%2015-37-42.jpg',
+            'status': 'ok',
             'discount' : true,
-            'time'  : processResult.get('time')
-        ]*/
-
+            'time'  : 10000
+        ]
         def converter = result as JSON
 
 	render params.callback + "('" + converter.toString() + "')"
     }
-	
 }
