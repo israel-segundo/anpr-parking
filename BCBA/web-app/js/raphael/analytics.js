@@ -76,7 +76,7 @@ function graph(data,div) {
         is_label_visible = false,
         leave_timer,
         blanket = r.set();
-    label.push(r.text(60, 12, "24 hits").attr(txt));
+    label.push(r.text(60, 12, "24 entradas").attr(txt));
     label.push(r.text(60, 27, "22 September 2008").attr(txt1).attr({fill: color}));
     label.hide();
     
@@ -125,8 +125,8 @@ function graph(data,div) {
                 }
                 var ppp = r.popup(x, y, label, side, 1);
                 frame.show().stop().animate({path: ppp.path}, 200 * is_label_visible);
-                label[0].attr({text: data + " hit" + (data == 1 ? "" : "s")}).show().stop().animateWith(frame, {translation: [ppp.dx, ppp.dy]}, 200 * is_label_visible);
-                label[1].attr({text: lbl + " September 2008"}).show().stop().animateWith(frame, {translation: [ppp.dx, ppp.dy]}, 200 * is_label_visible);
+                label[0].attr({fill:"#fff", text: data + " evento" + (data == 1 ? "" : "s")}).show().stop().animateWith(frame, {translation: [ppp.dx, ppp.dy]}, 200 * is_label_visible);
+                label[1].attr({text: lbl + " (Tiempo)"}).show().stop().animateWith(frame, {translation: [ppp.dx, ppp.dy]}, 200 * is_label_visible);
                 dot.attr("r", 6);
                 is_label_visible = true;
             }, function () {
