@@ -11,7 +11,7 @@ class SearchController {
 	}
     def advancedSearch = { 
 		
-	}
+    }
 
     def automaticSearch = { }
 
